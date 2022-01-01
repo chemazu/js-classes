@@ -1,15 +1,40 @@
-//static Methoods: this methods are called with the keyword "static", they dont need an instance to be called to be use see below
+//Inheritance and Extends
 
-class Square {
-    constructor(width){
-        this.width=width
-
-    }
-    static egg (){
-        console.log("i am a static function")
-    }
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  describe() {
+    console.log(`i am ${this.name} and i am ${this.age} years old`);
+  }
 }
 
-let square1 = new Square(5)
-//  square1.egg() throws an error of "TypeError: square1.egg is not a function"
-Square.egg()
+// Programmer extends Person it inherits all the feature of Person
+class Programmer extends Person {
+  constructor(name, age, experience) {
+    super(name, age)
+
+    this.name = name;
+    this.age = age;
+    this.experience = experience;
+    //custom cbehavior
+    
+
+  }
+  describeProgrammer(){
+    console.log(`i am ${this.name} and i am ${this.age} years old with ${this.experience} years of programming`);
+  }
+}
+
+const array1 = ['a', 'b', 'c'];
+
+
+
+
+
+let person1 = new Person("Mazu", 24)
+person1.describe()
+ let programmer1 = new Programmer("Mazu", 24,40)
+programmer1.describe()
+programmer1.describeProgrammer()
