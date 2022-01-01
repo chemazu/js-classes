@@ -1,4 +1,4 @@
-//static Methiods: this methods are called with the keyword "static", they dont need an instance to be called to be use see below
+//static Methoods: this methods are called with the keyword "static", they dont need an instance to be called to be use see below
 
 class Square {
     constructor(width){
