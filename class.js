@@ -1,22 +1,15 @@
-//getters and setters
+//static Methiods: this methods are called with the keyword "static", they dont need an instance to be called to be use see below
 
 class Square {
     constructor(width){
         this.width=width
 
     }
-    //The get syntax binds an object property to a function that will be called when that property is looked up.
-    get area (){
-        return this.width * this.width
-    }
-    set area (area){
-        this.width= Math.sqrt(area)
-
+    static egg (){
+        console.log("i am a static function")
     }
 }
 
 let square1 = new Square(5)
-square1.area=81 
-// this is to set the area, this is used to change variables The set syntax binds an object property to a function to be called when there is an attempt to set that property.
-console.log(square1.width)
-console.log(square1.area)
+//  square1.egg() throws an error of "TypeError: square1.egg is not a function"
+Square.egg()
