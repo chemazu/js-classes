@@ -1,28 +1,22 @@
-// classes are used to create objecs
-class Rectangle{
-    //setup
-    constructor(width,height,color){
+//getters and setters
 
-        console.log("create my rectangle ")
+class Square {
+    constructor(width){
         this.width=width
-        this.length=height
-        this.color=color
-        //the this keyword refers to the object created
-
-
 
     }
-    getArea(){
-        return this.width * this.length
+    //The get syntax binds an object property to a function that will be called when that property is looked up.
+    get area (){
+        return this.width * this.width
     }
-    printDescription(){
-        console.log (`i am a  ${this.color} rectangle of width ${this.width} and length of  ${this.length}`)
-    }
-//constructors are ran when the object is being created
+    set area (area){
+        this.width= Math.sqrt(area)
 
+    }
 }
-let myRectangle =new Rectangle(5,3,"indigo")
-let myRectangle2 =new Rectangle(2,4,"purple")
 
-console.log(myRectangle2.getArea())
-myRectangle2.printDescription()
+let square1 = new Square(5)
+square1.area=81 
+// this is to set the area, this is used to change variables The set syntax binds an object property to a function to be called when there is an attempt to set that property.
+console.log(square1.width)
+console.log(square1.area)
