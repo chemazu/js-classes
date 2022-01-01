@@ -21,7 +21,7 @@ class Rectangle{
 //constructors are ran when the object is being created
 
 }
-let myRectangle =new Rectangle(5,3,"yellow")
+let myRectangle =new Rectangle(5,3,"indigo")
 let myRectangle2 =new Rectangle(2,4,"purple")
 
 console.log(myRectangle2.getArea())
